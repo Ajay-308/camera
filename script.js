@@ -117,14 +117,3 @@ function stopTimer() {
   timer.innerText = "00:00:00";
   timer.style.display = "none";
 }
-//filtering logic
-let filterlayer = document.querySelector(".filter-layer");
-let allfilter = document.querySelectorAll(".filter");
-allfilter.forEach((filterElem) => {
-  filterElem.addEventListener("click", (e) => {
-    //get
-    transparentcolor =
-      getComputedStyle(filterElem).getPropertyValue("background-color");
-    filterlayer.style.backgroundcolor = transparentcolor;
-  });
-});
