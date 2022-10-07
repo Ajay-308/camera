@@ -32,16 +32,6 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     //conversion media chunk into data
     const blob = new Blob(chunks, { type: "video/mp4" });
 
-    // if(db){
-    //   let videoId=shortid();
-    //   let dbTransaction=db.transaction("video","readwrite")
-    //   let videoStore=dbTransaction.objectStore("video")
-    //   let videoEntry={
-    //     id:videoId,
-    //     bolbData:blob
-    //   }
-    //   videoStore.add(videoEntry)
-    // }
     const videoUrl = URL.createObjectURL(blob);
     let a = document.createElement("a");
     a.href = videoUrl;
