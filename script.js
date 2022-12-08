@@ -48,7 +48,7 @@ captureBtnCont.addEventListener("click", (e) => {
   let tool = canvas.getContext("2d");
   tool.drawImage(video, 0, 0, canvas.height, canvas.width);
 
-  //filtering
+  
   tool.fillStyle = transparentcolor;
   tool.fillRect(0, 0, canvas.height, canvas.width);
 
